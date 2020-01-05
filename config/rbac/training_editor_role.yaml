@@ -1,0 +1,26 @@
+# permissions to do edit trainings.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: training-editor-role
+rules:
+- apiGroups:
+  - ml.tribit.io
+  resources:
+  - trainings
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ml.tribit.io
+  resources:
+  - trainings/status
+  verbs:
+  - get
+  - patch
+  - update

@@ -1,0 +1,10 @@
+domain: tribit.io
+repo: tribit.io/m
+resources:
+- group: ml
+  kind: Training
+  version: v1alpha1
+- group: ml
+  kind: Deployment
+  version: v1alpha1
+version: "2"
